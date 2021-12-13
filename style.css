@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+i {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/************
+End of Commons
+*************/
+
+nav {
+  background-color: #000;
+  text-align: center;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav i {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  left: 20px;
+}
+
+/* Search Bar */
+form {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+input {
+  height: 3rem;
+  width: 100%;
+  margin: 1rem auto;
+  text-indent: 1rem;
+  font-size: 1rem;
+}
+
+input:focus {
+  border: none;
+}
+
+/* Selection */
+.selection {
+  position: relative;
+}
+
+.selection a {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: calc(30vh - 1.67rem);
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.selection a h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  width: 100%;
+  z-index: 1;
+}
+
+.selection a i {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  z-index: 2;
+}
+
+.selection a img {
+  width: 60%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  object-fit: cover;
+}
+
+/* Javascript */
+.selection .selected {
+  height: 10vh;
+}
+
+.selection a .selectedH1 {
+  color: #fff;
+}
+
+.selection a i {
+  opacity: 0;
+}
+
+.selection a .selectedi {
+  opacity: 1;
+}
+
+.selection a .selectedIMG {
+  transition: all 0.25s;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.selection .selected {
+  margin-bottom: 1rem;
+}
+
+.selection .hiddenSibling {
+  transform: translateX(100%);
+  height: 0;
+}
+
+.selection .hiddenSiblingBig {
+  opacity: 0.5;
+}
+
+.selectedDiv {
+  display: grid;
+  gap: 2rem;
+  margin: 0 1rem;
+}
+
+.selectedDiv div h4 {
+  margin: 0 0 0.5rem 1rem;
+}
+
+.selectedDiv div h4 p {
+  font-size: 1rem;
+  color: grey;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 800px) {
+  .selection {
+    display: flex;
+    max-width: min(90%, 1300px);
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .selection a {
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .selection a h1 {
+    position: relative;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .selection a img {
+    width: 100%;
+    max-width: 425px;
+    height: 100%;
+    max-height: 250px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    order: -1;
+  }
+}
