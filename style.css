@@ -11,6 +11,8 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
