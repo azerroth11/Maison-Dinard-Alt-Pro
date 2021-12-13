@@ -24,10 +24,8 @@ choice.forEach((a) => {
       } else if (a.classList.contains('hiddenSiblingBig')) {
         selectedDiv.innerHTML = ''
         populate(a, selectedDiv)
-        console.log('yes')
       } else {
         selectedDiv.innerHTML = ''
-        console.log('error')
       }
       choice.forEach(() => {
         const choiceSiblings = choice.filter((name) => name.className != a.className)
