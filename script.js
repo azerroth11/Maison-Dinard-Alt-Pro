@@ -19,6 +19,16 @@ choice.forEach((a) => {
         selectedDiv.innerHTML = ''
       }
     } else {
+      if (selectedDiv.innerHTML == '') {
+        populate(a, selectedDiv)
+      } else if (a.classList.contains('hiddenSiblingBig')) {
+        selectedDiv.innerHTML = ''
+        populate(a, selectedDiv)
+        console.log('yes')
+      } else {
+        selectedDiv.innerHTML = ''
+        console.log('error')
+      }
       choice.forEach(() => {
         const choiceSiblings = choice.filter((name) => name.className != a.className)
         if (a.classList.contains('hiddenSiblingBig')) {
