@@ -20,12 +20,20 @@ choice.forEach((a) => {
       }
     } else {
       if (selectedDiv.innerHTML == '') {
+        selectedDiv.classList.add('opacity1')
         populate(a, selectedDiv)
+        selectedDiv.classList.add('selectedDivBorder')
       } else if (a.classList.contains('hiddenSiblingBig')) {
         selectedDiv.innerHTML = ''
         populate(a, selectedDiv)
       } else {
-        selectedDiv.innerHTML = ''
+        selectedDiv.classList.add('opacity0')
+        selectedDiv.classList.remove('opacity1')
+        setTimeout(function () {
+          selectedDiv.classList.remove('selectedDivBorder')
+          selectedDiv.classList.remove('opacity0')
+          selectedDiv.innerHTML = ''
+        }, 1000)
       }
       choice.forEach(() => {
         const choiceSiblings = choice.filter((name) => name.className != a.className)
