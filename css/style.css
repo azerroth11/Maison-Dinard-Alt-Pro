@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@200;300;400;600&display=swap');
+
+@font-face {
+  font-family: 'Trajan_Bold';
+  src: url('../Trajan_Bold.ttf') format('ttf');
+}
 
 * {
   box-sizing: border-box;
@@ -11,10 +16,12 @@ body {
   overflow-x: hidden;
   height: 100%;
   height: -webkit-fill-available;
+  width: 100vw;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 i {
@@ -40,6 +47,21 @@ nav {
   z-index: 5;
 }
 
+nav a {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  text-transform: uppercase;
+  font-family: 'Trajan_Bold', sans-serif;
+}
+
+nav img {
+  height: 125%;
+  max-height: 150%;
+}
+
 /* Search Bar */
 form {
   width: 100%;
@@ -57,6 +79,51 @@ input {
 
 input:focus {
   border: none;
+}
+
+/* Swiper */
+.hero {
+  position: relative;
+  display: none;
+}
+
+.swiper {
+  max-height: 390px;
+  max-width: 1300px;
+  margin-bottom: 5rem;
+}
+
+.swiper img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper div a h1 {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
+.swiper div a:first-child h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
+/* Selection Title */
+.selectionTitle {
+  display: none;
 }
 
 /* Selection */
@@ -141,6 +208,10 @@ input:focus {
   margin: 0 1rem;
 }
 
+.selectedDiv div h2 {
+  color: brown;
+}
+
 .selectedDiv div h4 {
   margin: 0 0 0.5rem 1rem;
 }
@@ -152,6 +223,20 @@ input:focus {
 }
 
 @media screen and (min-width: 800px) {
+  .hero {
+    display: block;
+  }
+
+  .selectionTitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .selectionTitle h1 {
+    font-weight: 400;
+  }
+
   .selection {
     display: flex;
     max-width: min(90%, 1300px);

@@ -300,3 +300,20 @@ const data = [
     color: ['Vin', 'Rosé', 'Blanc', 'Spiritueux'],
   },
 ]
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 2500,
+  },
+  speed: 1000,
+  centeredSlides: true,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    horizontalClass: 'swiper-pagination-horizontal',
+    clickable: true,
+  },
+})
