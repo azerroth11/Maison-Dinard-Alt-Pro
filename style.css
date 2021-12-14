@@ -68,7 +68,7 @@ input:focus {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  height: calc(30% - 1.67rem);
+  height: calc(30vh - 1.67rem);
   overflow: hidden;
   text-decoration: none;
   transition: all 0.5s;
