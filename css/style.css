@@ -85,12 +85,9 @@ input:focus {
 .hero {
   position: relative;
   display: none;
-}
-
-.swiper {
   max-height: 390px;
   max-width: 1300px;
-  margin-bottom: 5rem;
+  margin: 0 auto 2rem auto;
 }
 
 .swiper img {
@@ -230,7 +227,7 @@ input:focus {
   .selectionTitle {
     display: block;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 4rem 0 2rem 0;
   }
 
   .selectionTitle h1 {
@@ -249,13 +246,17 @@ input:focus {
   .selection a {
     margin: 0 auto;
     display: grid;
-    height: 30vh;
+    height: 31vh;
   }
 
   .selection a h1 {
     position: relative;
     text-align: center;
     transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1rem 0;
   }
 
   .selection a img {
@@ -274,11 +275,11 @@ input:focus {
     gap: 1rem;
     margin: 2rem auto;
     border-top: 1px black solid;
-    padding-top: 2rem;
   }
 
   .selectedDiv div {
     position: relative;
     width: 300px;
+    margin-top: 2rem;
   }
 }
