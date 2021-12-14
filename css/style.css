@@ -66,7 +66,7 @@ nav img {
 form {
   width: 100%;
   max-width: min(90%, 1300px);
-  margin: 0 auto;
+  margin: 0.5rem auto;
 }
 
 input {
@@ -219,6 +219,33 @@ input:focus {
   font-weight: normal;
 }
 
+/* About */
+.about {
+  width: 100%;
+  background-color: black;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.about > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;
+  max-width: 950px;
+}
+
+.about img {
+  max-width: 325px;
+}
+
+.about p {
+  max-width: 50ch;
+  color: #fff;
+  padding: 0.75rem 0;
+}
+
 @media screen and (min-width: 800px) {
   .hero {
     display: block;
@@ -274,7 +301,9 @@ input:focus {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 2rem auto;
+    padding: 1rem 0;
     border-top: 1px black solid;
+    border-bottom: 1px black solid;
   }
 
   .selectedDiv div {
