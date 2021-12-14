@@ -27,11 +27,9 @@ choice.forEach((a) => {
         selectedDiv.innerHTML = ''
         populate(a, selectedDiv)
       } else {
-        selectedDiv.classList.add('opacity0')
         selectedDiv.classList.remove('opacity1')
         setTimeout(function () {
           selectedDiv.classList.remove('selectedDivBorder')
-          selectedDiv.classList.remove('opacity0')
           selectedDiv.innerHTML = ''
         }, 1000)
       }
