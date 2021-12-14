@@ -223,9 +223,10 @@ input:focus {
 
 /* About */
 .about {
+  display: none;
   width: 100%;
   background-color: #d3c3b0;
-  margin: 4rem auto;
+  margin: 4rem auto 0 auto;
   padding: 4rem 0;
 }
 
@@ -322,5 +323,9 @@ input:focus {
     max-height: 1000px;
     margin: 2rem auto;
     padding: 1rem 0;
+  }
+
+  .about {
+    display: block;
   }
 }
