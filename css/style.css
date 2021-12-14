@@ -304,7 +304,6 @@ input:focus {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     margin: 0 auto;
     padding: 0;
   }
@@ -317,13 +316,10 @@ input:focus {
   .selectedDiv div {
     position: relative;
     width: max(275px, 30%);
-    margin-top: 2rem;
   }
 
   .opacity1 {
-    transition: all 1s;
-    max-height: 1100px;
-    opacity: 1;
+    max-height: 1000px;
     margin: 2rem auto;
     padding: 1rem 0;
   }
